@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}login | r-school{% endblock %}
+
+{% block home_active %}{% endblock %}
+{% block news_active %}{% endblock %}
+{% block admin_active %}{% endblock %}
+{% block students_active %}{% endblock %}
+{% block schedules_active %}{% endblock %}
+{% block signup_active %}{% endblock %}
+{% block login_active %}active{% endblock %}
+{% block about_active %}{% endblock %}
+{% block feedbacks_active %}{% endblock %}
+
+{% block maincontent %}
+
+<div class="col-md-12">
+	<div class="d-flex justify-content-center flex-column login">
+	<h2 class="fg"><i class="fa fa-sign-in"></i> Login</h2>
+	<form action="/login/" method="POST">
+  		<div class="mb-3">
+    			<label for="email" class="form-label fg">Email address</label>
+    			<input type="email" name="email" class="form-control bg-dracula" id="email" aria-describedby="emailHelp" placeholder="Your email address">
+    			<div id="emailHelp" class="form-text fg">We'll never share your email with anyone else.</div>
+  		</div>
+  		<div class="mb-3">
+   			<label for="password" class="form-label fg">Password</label>
+    			<input type="password" class="form-control bg-dracula" id="password" name="password" placeholder="Your password">
+  		</div>
+	</div>
+  		<div class="mb-3 form-check">
+    			<input type="checkbox" class="form-check-input" id="check">
+    			<label class="form-check-label fg" for="check">Remember me</label>
+  		</div>
+  		<input type="submit" class="btn btn-dracula" value="LOGIN" />
+	</form>
+	</div>
+</div>
+
+{% endblock %}

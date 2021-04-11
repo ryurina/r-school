@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block title %}Signup | r-school{% endblock %}
+
+{% block home_active %}{% endblock %}
+{% block news_active %}{% endblock %}
+{% block admin_active %}{% endblock %}
+{% block students_active %}{% endblock %}
+{% block schedules_active %}{% endblock %}
+{% block signup_active %}active{% endblock %}
+{% block login_active %}{% endblock %}
+{% block about_active %}{% endblock %}
+{% block feedbacks_active %}{% endblock %}
+
+{% block maincontent %}
+
+<div class="col-md-12">
+	<div class="d-flex justify-content-center flex-column login">
+	<h2 class="fg"><i class="fa fa-sign-in"></i> Signup</h2>
+	<form action="/signup/" method="POST" enctype="multipart/form-data">
+		<div class="mb-3">
+			<label class="form-label fg" for="username">Username</label>
+			<input class="form-control bg-dracula" id="username" type="text" name="username" placeholder="Your Username">
+		</div>
+		<div class="mb-3">
+			<label class="form-label fg" for="lastname">Name</label>
+			<input class="form-control bg-dracula" id="lastname" type="text" name="lastname" placeholder="Your Name">
+		</div>
+		<div class="mb-3">
+			<label class="form-label fg" for="firstname">Firstname</label>
+			<input class="form-control bg-dracula" id="firstname" type="text" name="firstname" placeholder="Your Firstname">
+		</div>
+  		<div class="mb-3">
+    			<label for="email" class="form-label fg">Email address</label>
+    			<input type="email" name="email" class="form-control bg-dracula" id="email" placeholder="Your email address">
+    			
+  		</div> 
+		<div class="mb-3">
+			<label for="phone" class="form-label fg">Telephone</label>
+			<input type="tel" name="phone" class="form-control bg-dracula" id="phone"  placeholder="Your phone number (i.e: +261XXXXXXXXX)">
+	  	</div>  
+		<div class="mb-3">
+   			<label for="password" class="form-label fg">Password</label>
+    			<input type="password" class="form-control bg-dracula" id="password" name="password" placeholder="Your password">
+  		</div>
+		<div class="mb-3">
+			<label class="form-label fg" for="birthday">Birthday</label>
+			<input class="form-control bg-dracula" id="birthday" type="date" name="birthday">
+		</div>
+		<div class="mb-3">
+			<label class="form-label fg" for="address">Address</label>
+			<input class="form-control bg-dracula" id="address" type="text" name="address" placeholder="Your address">
+		</div>
+		<div class="mb-3">
+			<label class="form-label fg" for="pic">Profile picture</label>
+			<input class="form-control bg-dracula" id="pic" type="file" name="image">
+		</div>
+		<div class="mb-3">
+			<label class="form-label fg" for="grade">Grade</label>
+			<input class="form-control bg-dracula" id="grade" type="text" name="grade" placeholder="Your grade">
+		</div>
+		<div class="mb-3">
+			<label class="form-label fg" for="status">Status</label>
+			<select id="status" name="status" class="form-control bg-dracula">
+  				<option value="Passing">Passing</option>
+ 				<option value="Repeating">Repeating</option>
+			</select>
+		</div>
+		<div class="form-text fg">We'll never share your personal informations with anyone else.</div>
+  		<input type="submit" class="btn btn-dracula" value="SIGNUP" />
+	</form>
+	</div>
+</div>
+
+{% endblock %}
